@@ -1,0 +1,458 @@
+/* Reset para que todos los navegadores muestren igual */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Estilo de la navegación */
+.navbar {
+  background-color: transparent;
+  padding: 1.5rem 2rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 3rem;
+  justify-content: space-around;
+}
+
+.logo img {
+  height: 60px; /* Ajusta el tamaño del logo */
+  display: block;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin-right: 28%;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: large;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #9de0dc;
+}
+
+/* Botón de contacto en la esquina derecha */
+.btn-contacto {
+  position: absolute;
+  right: 2%;
+  padding: 0.5rem 1rem;
+  background-color: #71A6A2;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contacto:hover {
+  background-color: #5e918d;
+}
+
+/* seccion hero */
+
+.hero {
+  background-image: url("/Users/pc/Desktop/ruizandcopage/imagenes/hero.jpg"); /* asegúrate que esté en esa carpeta */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 4rem 2rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.6); /* oscurece la imagen para mejor lectura */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #f0f0f0;
+}
+
+/* Boton cotizacion gratis */
+.cta-cotizacion {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #2c3e50; /* puedes cambiar el color */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 40px; /* 🔹 esto crea el borde redondeado */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-cotizacion:hover {
+  background-color: #34495e;
+  transform: scale(1.05);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* SECCION SOBRE NOSOTROS */
+
+.sobre-nosotros {
+  background-color: #fefdfc; /* fondo suave */
+  padding: 6rem 2rem;
+}
+
+.nosotros-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.nosotros-img img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.nosotros-texto {
+  flex: 1;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+  max-width: 600px;
+}
+
+.nosotros-texto .titulo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #333;
+  border-bottom: 3px solid #87b9b7; /* color turquesa suave */
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.nosotros-texto .subtitulo {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.nosotros-texto p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+
+
+/* SECCION NUESTROS PROYECTOS */
+
+.proyectos {
+  background-color: #fdfcfb;
+  padding: 6rem 2rem;
+}
+
+/* Contenedor de la sección: texto + tarjetas superpuestas */
+.proyectos-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Texto a la izquierda */
+.proyectos-texto {
+  flex: 1 1 300px;
+}
+
+.proyectos-texto h2 {
+  font-size: 2.5rem;
+  color: #333;
+  border-bottom: 3px solid #7db3b0;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.proyectos-texto p {
+  font-size: 1.4rem;
+  color: #444;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+/* Contenedor de las tarjetas (superposición) */
+.proyectos-imagenes {
+  flex: 1 1 500px;
+  position: relative;
+  height: 450px;
+}
+
+/* Estilo general de cada tarjeta */
+.tarjeta-proyecto {
+  width: 420px;
+  height: 350px;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+/* Imagen superior */
+.tarjeta2 {
+  transform: translate(40px, 40px);
+  z-index: 2;
+}
+
+/* Imagen inferior */
+.tarjeta1 {
+  z-index: 1;
+  opacity: 0.95;
+}
+
+/* Hover sobre cualquiera de las tarjetas */
+.tarjeta-proyecto:hover {
+  z-index: 3;
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen dentro de la tarjeta */
+.tarjeta-proyecto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Info de la tarjeta */
+.info-proyecto {
+  padding: 1rem;
+}
+
+.info-proyecto h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.info-proyecto p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* SECCION DE SERVICIOS */
+
+/* Estilos Generales de la Sección */
+.servicios {
+  background-color: #fdfcfb;
+  padding: 6rem 2rem;
+}
+
+/* Título y Descripción centrados */
+.servicios-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.servicios-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  border-bottom: 3px solid #7db3b0;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.servicios-header p {
+  font-size: 1.3rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Grid de 2 columnas */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Cada tarjeta de servicio */
+.servicio-item {
+  background-color: white;
+  padding: .7rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+/* Efecto al pasar el cursor */
+.servicio-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Título del servicio */
+.servicio-item h3 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Descripción del servicio */
+.servicio-item p {
+  font-size: .5 rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+
+/* SECCIÓN DE CONTACTO */
+
+.contacto {
+  background-color: #fdfcfb;
+  padding: 6rem 2rem;
+}
+
+/* Encabezado centrado */
+.contacto-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contacto-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  border-bottom: 3px solid #7db3b0;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.contacto-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Contenedor que alinea formulario e info */
+.contacto-contenido {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Formulario */
+.formulario-contacto {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.formulario-contacto button {
+  padding: 0.8rem;
+  background-color: #7db3b0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+  background-color: #5e908d;
+}
+
+/* Info de contacto */
+.info-contacto {
+  flex: 1;
+  min-width: 250px;
+  background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco 80% opaco */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center; /* Centra todo el contenido */
+}
+
+.logo-contacto {
+  width: 200px;           /* Tamaño del logo */
+  height: auto;
+  margin-bottom: 1rem;    /* Espacio debajo del logo */
+}
+
+.info-contacto h3 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.info-contacto p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
