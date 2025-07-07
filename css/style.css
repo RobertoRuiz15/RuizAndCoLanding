@@ -76,7 +76,7 @@ body {
 /* seccion hero */
 
 .hero {
-  background-image: url("/Users/pc/Desktop/ruizandcopage/imagenes/hero.jpg"); /* asegúrate que esté en esa carpeta */
+  background-image: url("../imagenes/hero.jpg"); /* asegúrate que esté en esa carpeta */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
