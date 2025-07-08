@@ -463,79 +463,25 @@ html {
    RESPONSIVE: MÓVILES
 --------------------- */
 @media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  /* NAV */
-  nav {
+  .navbar-container {
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
   }
 
   .nav-links {
-    display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    margin: 0;
-    padding: 0;
-  }
-
-  .nav-links li {
-    margin: 0;
-  }
-
-  .nav-links li a {
-    display: block;
-    padding: 0.5rem 0;
-    text-align: center;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 0;
   }
 
   .btn-contacto {
-    position: static;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
+}
 
-  /* HERO */
-  .hero {
-    height: auto;
-    padding: 6rem 1rem 4rem;
-    text-align: center;
-  }
 
-  .hero-content {
-    max-width: 100%;
-  }
-
-  .hero-content h2 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  /* PROYECTOS */
-  .proyectos-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .proyectos-imagenes {
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 100%;
-    position: static;
-    height: auto;
-  }
-
-  .tarjeta-proyecto {
-    width: 90%;
-    max-width: 400px;
-    margin: 0 auto;
-    position: relative;
-    transform: none !important;
-  }
+* {
+  outline: 1px solid red;
 }
 
