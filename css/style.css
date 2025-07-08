@@ -29,7 +29,6 @@ body {
 .navbar-container {
   display: flex;
   align-items: center;
-  width: 100%;
   gap: 3rem;
   justify-content: space-around;
 }
