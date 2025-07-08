@@ -39,17 +39,18 @@ body {
   display: block;
 }
 .nav-links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  margin-right: 28%;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0 0 0;
+}
+
+.nav-links li {
+  margin: 0;
 }
 
 .nav-links li a {
-  text-decoration: none;
-  color: white;
-  font-size: large;
-  transition: color 0.3s ease;
+  display: block;
+  padding: 0.5rem 0;
 }
 
 .nav-links li a:hover {
@@ -470,25 +471,35 @@ html {
     text-align: center;
   }
 
-  .navlinks {
+  .nav-links {
     flex-direction: column;
     gap: 1rem;
     margin: 1rem 0 0 0;
   }
 
-  .navlinks li {
+  .nav-links li {
     margin: 0;
   }
 
-  .navlinks li a {
+  .nav-links li a {
     display: block;
     padding: 0.5rem 0;
   }
 
+  .body {
+    overflow-x: hidden;
+  }
+
+
   /* Hero */
   .hero {
-    padding: 4rem 1rem;
+    height: auto;
+    padding: 6rem 1rem 4rem;
     text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
   }
 
   .hero h1 {
@@ -496,12 +507,13 @@ html {
   }
 
   .hero p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .boton-accion {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
   }
-
+  
+  
 }
