@@ -58,8 +58,6 @@ body {
 
 /* Botón de contacto en la esquina derecha */
 .btn-contacto {
-  position: absolute;
-  right: 2%;
   padding: 0.5rem 1rem;
   background-color: #71A6A2;
   color: white;
@@ -475,8 +473,15 @@ html {
   }
 
   .btn-contacto {
-    margin-top: 1rem;
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
   }
+}
+
+body {
+  overflow-x: hidden;
 }
 
 
