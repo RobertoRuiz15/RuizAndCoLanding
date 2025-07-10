@@ -9,16 +9,28 @@
 <body>
 
   <!-- Header de navegación -->
+<!-- Header de navegación CORREGIDO -->
 <header class="navbar">
   <div class="navbar-container">
     <div class="logo">
       <img src="imagenes/logo.png" alt="Logo de Ruiz & Co.">
     </div>
-    <ul class="nav-links">
-      <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-    </ul>
+
+     <!-- Botón hamburguesa (solo en móviles) -->
+    <button class="hamburguesa" id="btn-hamburguesa">
+      <i class="bi bi-list"></i> <!-- Icono de Bootstrap Icons -->
+    </button>
+    
+    <!-- Menú centrado -->
+    <nav class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Botón a la derecha -->
     <a href="#contacto" class="btn-contacto">Contacto</a>
   </div>
 </header>

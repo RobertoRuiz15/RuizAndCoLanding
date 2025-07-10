@@ -13,62 +13,61 @@ body {
 }
 
 /* Estilo de la navegación */
-.navbar {
-  background-color: transparent;
-  padding: 1.5rem 2rem;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  left: 0;
-  z-index: 10;
-  box-shadow: none;
-  display: flex;
-  align-items: center;
-}
 
 .navbar-container {
   display: flex;
+  justify-content: space-between; /* Distribuye logo, menú y botón */
   align-items: center;
-  gap: 3rem;
-  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  background-color: white; /* Fondo sólido para el nav */
+  position: relative; /* Cambiado de absolute a relative */
+  z-index: 100; /* Aseguramos que esté sobre el hero */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra para separar del hero */
 }
 
-.logo img {
-  height: 60px; /* Ajusta el tamaño del logo */
-  display: block;
+/* Menú centrado */
+.nav-menu {
+  flex-grow: 1; /* Ocupa el espacio disponible */
+  display: flex;
+  justify-content: center; /* Centra los links */
 }
+
 .nav-links {
-  flex-direction: column;
-  gap: 1rem;
-  margin: 1rem 0 0 0;
-}
-
-.nav-links li {
+  display: flex;
+  gap: 2rem; /* Espacio entre links */
+  list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
-  display: block;
-  padding: 0.5rem 0;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 .nav-links li a:hover {
-  color: #9de0dc;
+  color: #7db3b0; /* Color turquesa al hover */
 }
 
-/* Botón de contacto en la esquina derecha */
+/* Botón de contacto a la derecha */
 .btn-contacto {
-  padding: 0.5rem 1rem;
-  background-color: #71A6A2;
+  padding: 0.6rem 1.5rem;
+  background-color: #7db3b0;
   color: white;
-  border-radius: 20px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
+  margin-left: auto; /* Lo empuja a la derecha */
 }
 
 .btn-contacto:hover {
-  background-color: #5e918d;
+  background-color: #5e908d;
 }
 
 /* seccion hero */
@@ -79,13 +78,14 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  padding: 4rem 2rem 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   color: white;
   text-align: center;
+  margin-top: -80px;
+  padding-top: 120px;
 }
 
 .hero::after {
@@ -459,29 +459,65 @@ html {
 /* --------------------
    RESPONSIVE: MÓVILES
 --------------------- */
-@media (max-width: 768px) {
-  .navbar-container {
-    flex-direction: column;
-    align-items: center;
-  }
+/* Ocultar hamburguesa en desktop */
+.hamburguesa {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 
+/* Estilos para móviles */
+@media (max-width: 768px) {
+  .hamburguesa {
+    display: block; /* Mostrar botón */
+    z-index: 101;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Oculta el menú */
+    width: 70%;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+  }
+  
+  .nav-menu.active {
+    right: 0; /* Muestra el menú */
+  }
+  
   .nav-links {
     flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    padding: 1rem 0;
+    gap: 2rem;
   }
-
+  
   .btn-contacto {
-    position: absolute;
-    right: 2%;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-top: 2rem;
   }
 }
 
-body {
-  overflow-x: hidden;
+@media (max-width: 768px) {
+  .proyectos-container {
+    flex-direction: column;
+  }
+  
+  .proyectos-imagenes {
+    height: auto;
+    margin-top: 2rem;
+  }
+  
+  .tarjeta-proyecto {
+    position: relative !important;
+    width: 100%;
+    margin-bottom: 1rem;
+    transform: none !important;
+  }
 }
 
 
